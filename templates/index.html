@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Decider Table</title>
+    <link href="{{ url_for('static',filename ='bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename ='letters.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <span class="letter" data-letter="P">P</span>
+            <span class="letter" data-letter="r">r</span>
+            <span class="letter" data-letter="o">o</span>
+            <span class="letter" data-letter="j">j</span>
+            <span class="letter" data-letter="e">e</span>
+            <span class="letter" data-letter="c">c</span>
+            <span class="letter" data-letter="t">t</span></div>
+        <div class="col-md-1"></div>
+
+    </div>
+</div>
+
+
+
+<body class="bg-custom " >
+<div class="container text-center">
+    <!--  Row of lists  -->
+    <div class="row">
+        <div  class="col-md-6">
+            <ol id="pGroupList" class="list-group">
+                <li class="list-group-item active">Lecture groups</li>
+                <li class="list-group-item " >
+                    Item one
+                    <button id="up_btn_G1"  class="btn btn-sm btn-outline-dark up-btn float-sm-left">up</button>
+                    <button id="down_btn_G1" class="btn btn-sm btn-outline-dark down-btn float-sm-right">down</button>
+                    <span class="clearfix"></span>
+                </li>
+
+                <li class="list-group-item " >
+                    Item Two
+                    <button id="up_btn_G2"  class="btn btn-sm btn-outline-dark up-btn float-sm-left">up</button>
+                    <button id="down_btn_G2" class="btn btn-sm btn-outline-dark down-btn float-sm-right">down</button>
+                    <span class="clearfix"></span>
+                </li>
+
+            </ol>
+        </div>
+
+        <div class="col-md-6 ">
+            <ol id="pMentorList" class="list-group"></ol>
+        </div>
+    </div>
+    <hr>
+    <!-- Row with form -->
+    <div class="row ">
+        <div class="container">
+
+            <form  action="index.html">
+
+                <div class="row justify-content-center">
+<!--                    <div class="col-3"></div>-->
+
+                    <div class="form-group form-inline col-6 justify-content-center">
+                        <label>Add Study Group &emsp;</label>
+                        <input type="text" class="form-control" placeholder="Add group name">
+                        <button id="addGroupBtn" class="btn btn-primary">+Group</button>
+                    </div>
+                    
+                    <div class="form-group form-inline col-6 justify-content-center">
+                         <label >Add Mentor &emsp;</label>
+                        <input type="text" class="form-control" placeholder="Add mentor name">
+                        <button id="addMentorBtn" class="btn btn-primary">+Mentor</button>
+
+                    </div>
+
+
+
+<!--                    <div class="col-3"></div>-->
+
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+<div class="container justify-content-center">
+    <h1 id="message"></h1>
+</div>
+<script src="{{ url_for('static',filename ='main.js') }}"></script>
+</body>
+</html>
