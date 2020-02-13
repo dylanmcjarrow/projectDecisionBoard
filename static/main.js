@@ -1,6 +1,7 @@
 const listItem_mentor = document.querySelector("#pMentorList");
 const listItem_group = document.querySelector("#pGroupList");
-const message_display = document.querySelector("#message");
+const input_mentor = document.querySelector("#mnt_input");
+const input_group = document.querySelector("#grp_input");
 
 
 let buttons_elements;
@@ -23,7 +24,7 @@ function api_request_GET() {
 
     let request = new XMLHttpRequest();
 // Open a new connection, using the GET request on the URL endpoint
-    request.open('GET', url , true);
+    request.open('GET', url, true);
 
     request.onload = function () {
 
@@ -66,17 +67,43 @@ function api_request_POST(listName, NewArr) {
 
 }
 
-
 function button_event(e) {
     const event_target_id = e.target.id;
 
     if (event_target_id === "addMentorBtn") {
+        const input_val = input_mentor.value;
+        input_group.value = "";
+        console.log(input_val);
+        add_to_list("mentor", input_val);
 
+    } else if (event_target_id === "addGroupBtn") {
+        const input_val = input_group.value;
+         input_group.value = "";
+        console.log(input_val);
+        add_to_list("group", input_val);
 
-    } else if (event_target_id !== "addGroupBtn") {
+    } else {
         const list_action = clicked_list_button(event_target_id);
-        // console.log(`moved ${list_action.item_direction} in ${list_action.list_group} at ${list_action.item_number}`);
         MoveItem(list_action.item_direction, list_action.item_number, list_action.list_group);
+    }
+
+
+}
+
+function add_to_list(list_name, new_item) {
+
+    if (list_name === "mentor") {
+
+        mentorArr.push(new_item);
+        api_request_POST("mentor",mentorArr);
+        resetLists();
+    } else if (list_name === "group") {
+        groupArr.push(new_item);
+        api_request_POST("group",groupArr);
+        resetLists();
+
+    } else {
+        console.log("you fucked you")
     }
 
 

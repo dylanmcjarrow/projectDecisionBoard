@@ -1,24 +1,29 @@
 {
     "mentor": [
         "Prof. J.P. de Villiers ",
-        "Prof. I.K. Craig ",
         "Dr. A. de Freitas ",
-        "Dr. F. Camisani ",
-        "Prof. W.P. du Plessis",
-        "Prof. J.J. Hanekom ",
-        "Prof. T. Hanekom ",
-        "Prof. T-H. Joubert",
-        "Dr. J.D. Le Roux ",
-        "Prof. J.W. Odendaal",
-        "Dr. F. Paluncic",
-        "Dr. J. Schoeman",
+        "Prof. I.K. Craig ",
         "Dr. S. Smith",
+        "Prof. W.P. du Plessis",
+        "Dr. J.D. Le Roux ",
+        "Dr. F. Camisani ",
+        "Dr. F. Paluncic",
+        "Dr. J.H. Van Wyk",
+        "Prof. J.W. Odendaal",
         "Prof. T. Stander",
-        "Dr. J.H. Van Wyk"
+        "Prof P. Jacobs",
+        "Prof. T-H. Joubert",
+        "Prof. T. Hanekom ",
+        "Dr. J. Schoeman",
+        "Prof. J.J. Hanekom "
     ],
     "group": [
-        "micro",
-        "control systems",
-        "EM"
+        "Advanced Sensor Networks",
+        "Signal Processing and Telecommunications",
+        "Control Systems",
+        "Microelectronics",
+        "Intelligent Systems/Electromagnetism",
+        "Electromagnetism",
+        "Bioengineering"
     ]
 }
